@@ -97,6 +97,22 @@ void *shmht_search (struct shmht *h, void *k, size_t key_size,
 
 int shmht_remove (struct shmht *h, void *k, size_t key_size);
 
+/*!   
+ * @name        shmht_insert
+ * @param   h   the hashtable to insert into
+ * @param   k   the key - hashtable claims ownership and will free on removal
+ * @param   v   the value - does not claim ownership
+ * @return      > zero for successful insertion, else for error.
+ *
+ * The size of this hashtable is fixed, so if the hashtable is full, the insert
+ * will fail.
+ */
+
+int
+shmht_update (struct shmht *h, void *k, size_t key_size, void *v,
+				  size_t value_size);
+
+
 
 
 /*!   

@@ -10,6 +10,7 @@
 #include <sys/types.h>
 #include <sys/ipc.h>
 #include <sys/sem.h>
+#include <stdio.h>
 
 #define SEM_READER 0
 #define SEM_WRITER 1
